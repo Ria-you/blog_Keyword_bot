@@ -1,0 +1,30 @@
+## 🧠 출력 예시
+
+📌 주요 키워드  
+- 바르셀로나 (2회)  
+- 디즈니플러스 (1회)
+
+📣 추천 해시태그  
+#바르셀로나 #디즈니플러스 #서울월드컵경기장
+"""
+
+config_toml = """
+[server]
+headless = true
+port = 8501
+enableCORS = false
+"""
+
+# Save both files
+readme_path = "/mnt/data/README.md"
+config_path = "/mnt/data/.streamlit_config.toml"
+
+with open(readme_path, "w", encoding="utf-8") as f:
+    f.write(readme_content)
+
+with open(config_path, "w", encoding="utf-8") as f:
+    f.write(config_toml)
+
+readme_path, config_path
+결과
+('/mnt/data/README.md', '/mnt/data/.streamlit_config.toml')
